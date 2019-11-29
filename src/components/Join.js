@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Join = () => {
-    // state
+    // [state, method]
     const [name, setName] = useState('');
     const [room, setRoom] = useState('');
 
@@ -14,15 +14,17 @@ const Join = () => {
                     <input
                         placeholder="Name"
                         className="join__input"
-                        type="text" />
+                        type="text"
+                        onChange={e => setName(e.target.value)} />
                 </div>
                 <div>
                     <input
                         placeholder="Room"
                         className="join__input"
-                        type="text" />
+                        type="text"
+                        onChange={e => setRoom(e.target.value)} />
                 </div>
-                <Link>
+                <Link onClick={e => (!name || !room) ? e.preventDefault() : null} to={`/chat?name=${name}&room=${room}`}>
                     <button className="join__button" type="submit">Join Chatroom</button>
                 </Link>
             </div>
