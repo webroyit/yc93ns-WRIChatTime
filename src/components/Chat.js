@@ -23,7 +23,16 @@ const Chat = ({ location }) => {
         setName(name);
         setRoom(room);
 
-        console.log(socket);
+        // send data to the server that a user join the chatroom
+        socket.emit("join", { name, room});
+
+        return () => {
+            // send a message to the sever that the user left the chatroom
+            socket.emit("disconnect");
+
+            // turn the connect off
+            socket.off();
+        }
 
         // excute this function only if these values change
     }, [ENDPOINT, location.search]);
