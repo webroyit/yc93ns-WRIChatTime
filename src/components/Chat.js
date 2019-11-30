@@ -45,10 +45,21 @@ const Chat = ({ location }) => {
             // combine messages
             setMessages([...messages, message])
         })
-    }, [messages])
+    }, [messages]);
+
+    const sendMessage = (e) => {
+
+    };
 
     return(
-        <h1>Chat</h1>
+        <div className="chat">
+            <div className="chat__container">
+                <input
+                    value={message}
+                    onChange={e => setMessage(e.target.value)}
+                    onKeyPress={e => e.key === "Enter" ? sendMessage(e) : null} />
+            </div>
+        </div>
     );
 };
 
