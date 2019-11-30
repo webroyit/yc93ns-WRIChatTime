@@ -33,7 +33,7 @@ const Chat = ({ location }) => {
             socket.emit("disconnect");
 
             // turn the connect off
-            socket.off();
+            socket.disconnect();
         }
 
         // excute this function only if these values change
@@ -47,8 +47,17 @@ const Chat = ({ location }) => {
         })
     }, [messages]);
 
-    const sendMessage = (e) => {
+    // send a message to the server
+    const sendMessage = e => {
+        // prevent the page from refreshing
+        e.preventDefault();
 
+        if(message){
+            // third argment is a callback that clear the input clear
+            socket.emit("sendMessage", message, () => setMessage(''));
+        }
+
+        console.log(message, messages);
     };
 
     return(
