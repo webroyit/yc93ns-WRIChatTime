@@ -3,6 +3,7 @@ import queryString from 'query-string';
 import io from 'socket.io-client';
 
 import ChatHeader from './ChatHeader';
+import ChatInput from './ChatInput';
 
 let socket;
 
@@ -64,11 +65,11 @@ const Chat = ({ location }) => {
     return(
         <div className="chat">
             <div className="chat__container">
-                <ChatHeader room={ room }/>
-                <input
-                    value={message}
-                    onChange={e => setMessage(e.target.value)}
-                    onKeyPress={e => e.key === "Enter" ? sendMessage(e) : null} />
+                <ChatHeader room={room}/>
+                <ChatInput
+                    message={message}
+                    setMessage={setMessage}
+                    sendMessage={sendMessage} />
             </div>
         </div>
     );
