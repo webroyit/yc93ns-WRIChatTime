@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import queryString from 'query-string';
 import io from 'socket.io-client';
 
+import ChatHeader from './ChatHeader';
+
 let socket;
 
 const Chat = ({ location }) => {
@@ -54,15 +56,15 @@ const Chat = ({ location }) => {
 
         if(message){
             // third argment is a callback that clear the input clear
-            socket.emit("sendMessage", message, () => setMessage(''));
+            socket.emit("sendMessage", message, () => setMessage(""));
         }
-
-        console.log(message, messages);
     };
+    console.log(message, messages);
 
     return(
         <div className="chat">
             <div className="chat__container">
+                <ChatHeader room={ room }/>
                 <input
                     value={message}
                     onChange={e => setMessage(e.target.value)}
