@@ -8,6 +8,8 @@ const Chat = ({ location }) => {
     // [state, method]
     const [name, setName] = useState('');
     const [room, setRoom] = useState('');
+    const [message, setMessage] = useState('');
+    const [messages, setMessages] = useState([]);
 
     const ENDPOINT = 'localhost:8000';
 
@@ -36,6 +38,14 @@ const Chat = ({ location }) => {
 
         // excute this function only if these values change
     }, [ENDPOINT, location.search]);
+
+    // listen for new message
+    useEffect(() => {
+        socket.on("message", message => {
+            // combine messages
+            setMessages([...messages, message])
+        })
+    }, [messages])
 
     return(
         <h1>Chat</h1>
