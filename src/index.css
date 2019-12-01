@@ -1,3 +1,18 @@
+:root{
+    --primary-color: #f872b9ef;
+    --secondary-color: #3a9c68;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
 
 /* *************************************** Join ********************************** */
 .join{
@@ -11,28 +26,29 @@
 .join__container{
     height: 22rem;
     padding: 2rem 5rem;
-    background-color: #f872b9ef;
+    background-color: var(--primary-color);
 }
 
 .join__heading{
     color: white;
     font-size: 2.5rem;
     text-transform: uppercase;
-    padding-bottom: .7rem;
+    padding-bottom: .5rem;
     border-bottom: 2px solid white;
+    margin-bottom: 2rem;
 }
 
 .join__input{
     border-radius: 0;
     padding: .4rem .45rem;
     margin-bottom: 3px;
-    width: 95%;
+    width: 100%;
     font-size: 1.3rem;
 }
 
 .join__button{
     color: #fff;
-    background-color: #3a9c68;
+    background-color: var(--secondary-color);
     font-size: 1.4rem;
     text-decoration: none;
     margin-top: 1.5rem;
@@ -42,4 +58,50 @@
     border: none;
     width: 100%;
     cursor: pointer;
+}
+
+/* *************************************** Chat ********************************** */
+.chat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.chat__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid blue;
+    border-radius: 8px;
+    height: 60%;
+    width: 50%;
+}
+
+/* *************************************** Chat Header ********************************** */
+.chatHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    border-radius: 8px 8px 0 0;
+    height: 4.5rem;
+    width: 100%;
+    padding: 1rem
+}
+
+.chatHeader__title {
+    font-size: 2.2rem;
+    color: white;
+}
+
+.chatHeader__btn {
+    background-color: #e4370c;
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    font-size: 1.5rem;
+}
+
+.chatHeader__btn:hover{
+    background-color: #be5b43;
 }
