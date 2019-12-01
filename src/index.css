@@ -105,3 +105,35 @@ a{
 .chatHeader__btn:hover{
     background-color: #be5b43;
 }
+
+/* *************************************** Chat Input ********************************** */
+.chatInput {
+    display: flex;
+    border-top: 2px solid #d3c2c2;
+}
+
+.chatInput__input {
+    border: none;
+    border-radius: 0;
+    padding: .4rem 1rem;
+    width: 80%;
+    font-size: 1.3rem;
+    border-bottom-left-radius: 8px;
+}
+
+.chatInput__input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
+.chatInput__button {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    display: inline-block;
+    border: none;
+    border-bottom-right-radius: 8px;
+    width: 20%;
+    cursor: pointer;
+}
