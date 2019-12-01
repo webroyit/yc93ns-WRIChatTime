@@ -14,8 +14,8 @@ const Message = ({ message: { user, text }, name }) => {
         isSetByCurrentUser ? (
             <div className="message startRight">
                 <p className="message__name">{trimName}</p>
-                <div className="message__box">
-                    <p className="message__text">{text}</p>
+                <div className="message__box backgroundPink">
+                    <p className="message__text textWhite">{text}</p>
                 </div>
             </div>
         ) : (
