@@ -1,0 +1,45 @@
+
+/* *************************************** Join ********************************** */
+.join{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 15rem;
+    height: 100vh;
+}
+
+.join__container{
+    height: 22rem;
+    padding: 2rem 5rem;
+    background-color: #f872b9ef;
+}
+
+.join__heading{
+    color: white;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    padding-bottom: .7rem;
+    border-bottom: 2px solid white;
+}
+
+.join__input{
+    border-radius: 0;
+    padding: .4rem .45rem;
+    margin-bottom: 3px;
+    width: 95%;
+    font-size: 1.3rem;
+}
+
+.join__button{
+    color: #fff;
+    background-color: #3a9c68;
+    font-size: 1.4rem;
+    text-decoration: none;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+}

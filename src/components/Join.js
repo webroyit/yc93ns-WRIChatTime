@@ -25,7 +25,7 @@ const Join = () => {
                         onChange={e => setRoom(e.target.value)} />
                 </div>
                 <Link onClick={e => (!name || !room) ? e.preventDefault() : null} to={`/chat?name=${name}&room=${room}`}>
-                    <button className="join__button" type="submit">Join Chatroom</button>
+                    <button className="join__button" type="submit">Join</button>
                 </Link>
             </div>
         </div>
