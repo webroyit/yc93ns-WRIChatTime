@@ -3,6 +3,7 @@ import queryString from 'query-string';
 import io from 'socket.io-client';
 
 import ChatHeader from './ChatHeader';
+import ChatMessage from './ChatMessage';
 import ChatInput from './ChatInput';
 
 let socket;
@@ -66,6 +67,7 @@ const Chat = ({ location }) => {
         <div className="chat">
             <div className="chat__container">
                 <ChatHeader room={room}/>
+                <ChatMessage messages={messages} name={name} />
                 <ChatInput
                     message={message}
                     setMessage={setMessage}
