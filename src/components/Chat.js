@@ -58,10 +58,12 @@ const Chat = ({ location }) => {
 
         if(message){
             // third argment is a callback that clear the input clear
-            socket.emit("sendMessage", message, () => setMessage(""));
+            socket.emit("sendMessage", message);
+            setMessage("");
         }
+
+        
     };
-    console.log(message, messages);
 
     return(
         <div className="chat">
