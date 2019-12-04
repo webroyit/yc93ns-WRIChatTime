@@ -15,7 +15,7 @@ const Chat = ({ location }) => {
     const [message, setMessage] = useState('');
     const [messages, setMessages] = useState([]);
 
-    const ENDPOINT = 'localhost:8000';
+    const ENDPOINT = 'https://wri-chattime-server.herokuapp.com/';
 
     // same as componentDidMount
     useEffect(() => {
