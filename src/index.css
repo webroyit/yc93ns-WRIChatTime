@@ -3,6 +3,14 @@
     --secondary-color: #3a9c68;
 }
 
+body{
+    background-image: url("./img/background.jpe");
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -74,7 +82,7 @@ a{
     justify-content: space-between;
     border: 1px solid blue;
     border-radius: 8px;
-    height: 60%;
+    height: 75%;
     width: 50%;
 }
 
@@ -141,6 +149,7 @@ a{
 /* *************************************** Message ********************************** */
 .messages{
     padding: 1.5rem 1rem;
+    background-color: #e7e2e2;
     overflow: auto;
     flex: auto;
 }
