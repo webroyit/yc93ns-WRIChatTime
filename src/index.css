@@ -182,6 +182,36 @@ a{
     letter-spacing: .3px;
 }
 
+/* *************************************** User List ********************************** */
+.userList{
+    margin-left: 100px;
+    background-color: white;
+    width: 20%;
+    height: 60%;
+    padding: 1rem;
+}
+
+.userList__container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50%;
+}
+
+.userList__title{
+    font-size: 1.8rem;
+    border-bottom: 2px solid var(--secondary-color);
+    margin-bottom: .8rem;
+}
+
+.userList__item {
+    display: flex;
+    align-items: center;
+}
+
+.userList__name{
+    font-size: 1.4rem;
+}
+
 /* *************************************** Utilities ********************************** */
 .startLeft{
     justify-content: flex-start;

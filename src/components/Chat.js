@@ -5,6 +5,7 @@ import io from 'socket.io-client';
 import ChatHeader from './ChatHeader';
 import ChatMessage from './ChatMessage';
 import ChatInput from './ChatInput';
+import UserList from './UserList';
 
 let socket;
 
@@ -12,6 +13,7 @@ const Chat = ({ location }) => {
     // [state, method]
     const [name, setName] = useState('');
     const [room, setRoom] = useState('');
+    const [users, setUsers] = useState('');
     const [message, setMessage] = useState('');
     const [messages, setMessages] = useState([]);
 
@@ -49,6 +51,10 @@ const Chat = ({ location }) => {
             // combine messages
             setMessages([...messages, message])
         })
+
+        socket.on('roomData', ({ users }) => {
+            setUsers(users);
+        })
     }, [messages]);
 
     // send a message to the server
@@ -75,6 +81,7 @@ const Chat = ({ location }) => {
                     setMessage={setMessage}
                     sendMessage={sendMessage} />
             </div>
+            <UserList users={users} />
         </div>
     );
 };
