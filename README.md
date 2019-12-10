@@ -1,5 +1,5 @@
 # WRI Chat Time
-Practicing on React Hooks and Socket.io 
+Practicing on React Hooks and Socket.io. The template is from JavaScript Mastery youtube channel.
 
 ## Links
 - [Backend](https://github.com/webroyit/h82jf9-WRIChatTimeServer)
